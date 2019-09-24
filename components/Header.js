@@ -1,72 +1,73 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link';
 
-const Navi = styled.nav`
+const Logo = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: auto;
+  height: auto;
+`;
+const Inline = styled.ul`
   display: flex;
+  justify-content: space-evenly;
+  background-color: #a099b2;
+  list-style: none;
 
-  flex-direction: row;
-  justify-content: center;
-  font-size: 30px;
-  font-family: apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-
-  & ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    background-color: white;
-    justify-content: center;
+  & li {
+    padding: 40px;
+    font-size: 40px;
   }
-
-  li a {
+  & li a {
     display: block;
-    color: #000;
-    padding: 8px 16px;
     text-decoration: none;
-    justify-content: center;
-  }
-
-  /* Change the link color on hover */
-  li a:hover {
-    background-color: blue;
     color: white;
+    font-family: 'Inconsolata', monospace;
+  }
+  & li a:hover {
+    background-color: #d6d3de;
+    text-transform: ;
   }
 `;
-
 const Footer = styled.footer`
-  display: flex;
-
-  flex-direction: row;
-  justify-content: center;
-  font-size: 30px;
-  padding: 30px;
-  font-family: apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-    sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 `;
+
+//Farbcode für das Logo = #565273
 
 function Header() {
   return (
     <body>
       <header>
-        <Navi>
-          <ul>
+        <div>
+          <Logo src="/static/logo.jpg" alt="whale" width="400" height="330" />
+        </div>
+        <div>
+          <Inline>
             <li>
-              <a href="#">Startseite</a>
+              <Link href="/home">
+                <a>Home</a>
+              </Link>
             </li>
             <li>
-              <a href="#">Produkte</a>
+              <Link href="/products">
+                <a>Products</a>
+              </Link>
             </li>
             <li>
-              {' '}
-              <a href="#">Einkaufswagen</a>
+              <Link href="/shop">
+                <a>Shop</a>
+              </Link>
             </li>
-          </ul>
-        </Navi>
+          </Inline>
+        </div>
       </header>
-      <div>
-        <img src="https://cdn.pixabay.com/photo/2018/09/17/09/25/golf-3683328_960_720.jpg" />
-      </div>
+
       <Footer>
         <div>
           <a href="#">Über uns</a>
