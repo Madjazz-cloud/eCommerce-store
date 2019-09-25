@@ -27,8 +27,7 @@ const Inline = styled.ul`
     font-family: 'Inconsolata', monospace;
   }
   & li a:hover {
-    background-color: #d6d3de;
-    text-transform: ;
+    color: white;
   }
 `;
 const Footer = styled.footer`
@@ -51,7 +50,7 @@ function Header() {
           <Inline>
             <li>
               <Link href="/home">
-                <a>Home</a>
+                <a>Home </a>
               </Link>
             </li>
             <li>
