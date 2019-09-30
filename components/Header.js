@@ -3,31 +3,38 @@ import styled from 'styled-components';
 import Link from 'next/link';
 
 const Logo = styled.img`
-  display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
-  width: auto;
-  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 250px;
+  height: 250px;
 `;
 const Inline = styled.ul`
-  display: flex;
+  display: inline-flex;
   justify-content: space-evenly;
   background-color: #a099b2;
   list-style: none;
+  width: 100%;
+
+  text-align: center;
+  vertical-align: middle;
+  justify-content: flex-start;
+
+  }
 
   & li {
     padding: 40px;
     font-size: 40px;
   }
   & li a {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: white;
     font-family: 'Inconsolata', monospace;
   }
   & li a:hover {
-    color: white;
+    color: black;
   }
 `;
 const Footer = styled.footer`
@@ -44,9 +51,7 @@ function Header() {
     <body>
       <header>
         <div>
-          <Logo src="/static/logo.jpg" alt="whale" width="400" height="330" />
-        </div>
-        <div>
+          <Logo src="/static/logo.jpg" alt="whale" />
           <Inline>
             <li>
               <Link href="/home">
