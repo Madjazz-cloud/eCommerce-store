@@ -15,7 +15,10 @@ function turnObjectIntoString(obj) {
 function singleProducts(props) {
   console.log(props.url.query); //gehört einfach zu Next.js und kann man benutzen um auf die Url zu kommen - braucht man um dynamic routing zu machen
   const name = props.url.query.name; //das ist der letzte Teil der Url
-  var obj = JSON.parse(props.cookies.myCookie); //THIS IS HERE BECAUSE OF THE SCOPE THING! LOOK THAT THIS WORKS DOWN BECAUSE IT IS IN THE RIGHT PLACE OF THE FUNCTIONS WHERE NO PROBLEM IS WITH THE SCOPE BECAUSE ITS THE WHOLE FUNCTION
+  var obj = JSON.parse(props.cookies.myCookie);
+  //THIS IS HERE BECAUSE OF THE SCOPE THING! LOOK THAT THIS WORKS DOWN BECAUSE IT IS IN THE RIGHT PLACE OF THE FUNCTIONS WHERE NO PROBLEM IS WITH THE SCOPE BECAUSE ITS THE WHOLE FUNCTION
+  document.cookie=()
+
   const foundProduct = dataproducts.find(product => {
     if (name === product.name) {
       //geht durch alle Elemente der Objekte bis es eines findet, dass den gleichen Namen hat wie in der Url
@@ -80,7 +83,7 @@ function singleProducts(props) {
         <br />
         myCookie:{props.cookies.myCookie}
       </div>
-      <div>{obj.count}</div>
+      <div>Numer of Product for Cart:{obj.count}</div>
     </div>
   );
 }

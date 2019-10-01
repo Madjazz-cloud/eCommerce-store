@@ -18,7 +18,7 @@ const allProducts = [
     id: '2',
     description: 'description 3',
     picture: '/static/logo.jpg',
-    price: '15,00 €S'
+    price: '15,00 €'
   }
 ];
 

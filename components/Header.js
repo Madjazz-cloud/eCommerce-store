@@ -32,6 +32,7 @@ const Inline = styled.ul`
     text-decoration: none;
     color: white;
     font-family: 'Inconsolata', monospace;
+    
   }
   & li a:hover {
     color: black;
