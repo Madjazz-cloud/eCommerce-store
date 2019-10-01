@@ -5,10 +5,10 @@ import Header from '../components/Header';
 import allProducts from '../dataproducts';
 
 const ProductLink = styled.ul`
-  padding: 20px;
+  padding: 50px;
 
   & a {
-    padding: 20px;
+    padding: 50px;
   }
 `;
 
