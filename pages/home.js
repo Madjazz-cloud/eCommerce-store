@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Slideshow from '../components/Slideshow';
-import allProducts from '../dataproducts';
+import getAllProducts from '../dataproducts';
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <Header />
       <main>
         <Slideshow />
-        <p>{allProducts[0].name}</p>
+        <p>{getAllProducts()[0].name}</p>
       </main>
     </div>
   );

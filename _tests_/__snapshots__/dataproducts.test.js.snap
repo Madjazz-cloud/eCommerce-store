@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gets a Product by ID 1`] = `
+Object {
+  "description": "description 1",
+  "id": "0",
+  "name": "Product-1",
+  "picture": "/static/logo.jpg",
+  "price": "5,00 €",
+}
+`;

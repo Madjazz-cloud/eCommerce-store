@@ -1,25 +1,30 @@
-const allProducts = [
+const products = [
   {
-    name: 'Product-1',
+    name: 'Apfel',
     id: '0',
-    description: 'description 1',
+    description: 'gelb',
     picture: '/static/logo.jpg',
-    price: '5,00 €'
+    price: '5,00'
   },
   {
-    name: 'Product-2',
+    name: 'Zwetschke',
     id: '1',
-    description: 'description 2',
+    description: 'lila',
     picture: '/static/logo.jpg',
-    price: '10,00 €'
+    price: '10,00'
   },
   {
-    name: 'Product-3',
+    name: 'Birne',
     id: '2',
-    description: 'description 3',
+    description: 'gr&uuml;n',
     picture: '/static/logo.jpg',
-    price: '15,00 €'
+    price: '15,00'
   }
 ];
 
-export default allProducts;
+export function getProductById(id) {
+  return products.find(product => product.id === id);
+}
+export default function getAllProducts() {
+  return products;
+}
